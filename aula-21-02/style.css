@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: rgb(37, 2, 238);
+    
+}
+main{
+    background-color: rgb(232, 159, 159);
+}
+section{
+    background-color: brown;
+}
+aside{
+    background-color: cadetblue;
+}
+footer{
+    background-color: bisque;
+}
