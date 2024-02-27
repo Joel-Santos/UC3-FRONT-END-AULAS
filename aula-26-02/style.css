@@ -1,0 +1,47 @@
+:root {
+    --cor-principal: #007bff;
+    --cor-secundaria: #6c757d;
+    --corsim: #100e0e; 
+    --cornao: #ff0404;
+    --espacamento-padrao: 16px;
+    --padding-botao: 10px 20px;
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    font-family: var(--fonte-padrao);
+    padding: var(--espacamento-padrao);
+    background-color: #f8f9fa;
+  }
+
+  h1 {
+    color: var(--cor-principal);
+    margin-bottom: var(--espacamento-padrao);
+  }
+
+  p {
+    color: var(--cor-secundaria);
+    margin-bottom: var(--espacamento-padrao);
+  }
+
+  .botao {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: var(--padding-botao);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--fonte-padrao);
+  }
+  
+.secundaria{
+    background-color: var(--cor-secundaria);
+}
+
+button.secundaria:hover{
+  background-color: var(--corsim);
+}
+
+.botao:hover {
+    background-color: var(--cornao);
+  }

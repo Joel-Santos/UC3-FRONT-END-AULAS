@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária Casa Feliz</title>
+    <style>
+        :root {
+            --cor-fundo-header: #005f73;
+            --cor-texto: #ffffff;
+            --cor-fundo-footer: #001219;
+            --cor-fundo-main: #f0f3bd;
+            --cor-fundo-aside: #eae2b7;
+            --padding-padrao: 20px;
+            --cor-destaque: #e63946;
+            --max-largura: 1200px; /* Largura máxima para o conteúdo */
+        }
+
+        html, body {
+            height: 100%; /* Faz com que a altura do body seja de no mínimo 100% da janela do navegador */
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        header {
+            background-color: var(--cor-fundo-header);
+            color: var(--cor-texto);
+            padding: var(--padding-padrao);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--cor-texto);
+        }
+        nav ul li a:hover {
+            text-decoration: none;
+            color: var(--cor-destaque);
+           
+        }
+
+        main {
+            flex: 1; /* Faz com que a main ocupe o espaço disponível, empurrando o footer para baixo */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
+            padding: var(--padding-padrao);
+            background-color: var(--cor-fundo-main);
+            margin: 0 auto; /* Centraliza o conteúdo */
+            max-width: var(--max-largura); /* Aplica a largura máxima */
+        }
+
+        section, aside {
+            flex: 1;
+            padding: var(--padding-padrao);
+            min-width: 300px; /* Garante que a section e o aside não fiquem muito estreitos */
+        }
+
+        aside {
+            background-color: var(--cor-fundo-aside);
+        }
+
+        footer {
+            background-color: var(--cor-fundo-footer);
+            color: var(--cor-texto);
+            text-align: center;
+            padding: var(--padding-padrao);
+            margin-top: auto; /* Garante que o footer fique na parte inferior */
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"> <!-- Container para controlar o layout com flexbox -->
+    <header>
+        <h1>Imobiliária Casa Feliz</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#imoveis-venda">Imóveis à Venda</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-nos">
+            <h2 class="destaque">Sobre Nós</h2>
+            <p>A Imobiliária Casa Feliz tem mais de 10 anos de experiência no mercado imobiliário, oferecendo as melhores opções de imóveis para todos os gostos e necessidades. Nossa missão é ajudar você a encontrar o lar dos seus sonhos.</p>
+        </section>
+        <section id="imoveis-venda">
+            <h2 class="destaque">Imóveis à Venda</h2>
+            <p>Confira nossa seleção exclusiva de imóveis à venda. Oferecemos consultoria especializada para garantir a melhor escolha para você e sua família.</p>
+        </section>
+        <aside>
+            <h3>Contato Rápido</h3>
+            <p>Tem interesse ou dúvidas sobre nossos imóveis? Entre em contato conosco agora mesmo pelo telefone (XX) XXXX-XXXX ou pelo e-mail contato@casafeliz.com.br.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2024 Imobiliária Casa Feliz. Todos os direitos reservados.</p>
+    </footer>
+</div>
+
+</body>
+</html>

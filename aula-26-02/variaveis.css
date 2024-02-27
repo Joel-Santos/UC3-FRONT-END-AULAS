@@ -1,0 +1,17 @@
+:root{
+    --cor-texto-body: rgba(75, 48, 231, 0.979);
+    --cor-de-fundo: rgb(28, 217, 94);
+    --estilo-fonte: 
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto-body);
+}
+
+footer{
+    color: var(--cor-texto-body);
+}
+ section{
+background-color: var(--cor-texto-body);
+ }
