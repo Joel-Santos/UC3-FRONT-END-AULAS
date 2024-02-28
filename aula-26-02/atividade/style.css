@@ -1,0 +1,73 @@
+:root {
+    --cor-fundo-header: #005f73;
+    --cor-texto: #ffffff;
+    --cor-fundo-footer: #001219;
+    --cor-fundo-main: #f0f3bd;
+    --cor-fundo-aside: #eae2b7;
+    --padding-padrao: 20px;
+    --cor-destaque: #e63946;
+    --max-largura: 1200px; /* Largura máxima para o conteúdo */
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    font-family: var(--fonte-padrao);
+    background-position: ;
+}
+
+
+header {
+    background-color: var(--cor-fundo-header);
+    color: var(--cor-texto);
+    padding: var(--padding-padrao);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: var(--cor-destaque);
+   
+}
+
+main {
+    flex: 1; /* Faz com que a main ocupe o espaço disponível, empurrando o footer para baixo */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    padding: var(--padding-padrao);
+    background-color: var(--cor-fundo-main);
+    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: var(--max-largura); /* Aplica a largura máxima */
+}
+
+section, aside {
+    flex: 1;
+    padding: var(--padding-padrao);
+    min-width: 300px; /* Garante que a section e o aside não fiquem muito estreitos */
+}
+
+aside {
+    background-color: var(--cor-fundo-aside);
+}
+
+footer {
+    background-color: var(--cor-fundo-footer);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: var(--padding-padrao);
+    margin-top: auto; /* Garante que o footer fique na parte inferior */
+}
