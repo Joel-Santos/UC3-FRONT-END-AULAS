@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="minilicao.css">
 </head>
 <body>
+    <main>
+        <section>
+            <h2>Questão 01</h2>
+            <p>Calculadora de descontos</p>
+            <div>
+                <label for="preco">Digite o preço do Produto:</label>
+                <input type="number" id="preco" name="preco1">
+            </div>
+            <div>
+                <label for="desconto">Digite o Desconto:</label>
+                <input type="number" id="desconto" name="desconto1">
+            </div>
+            <button id="questao01">Calcular</button>
+            <p id="resultado01"></p>
+        </section>
+        <section>
+            <h2>Questão 02</h2>
+            <p>Calculadora de descontos</p>
+            <div>
+                <label for="preco2">Digite o preço do Produto:</label>
+                <input type="number" id="preco2" name="preco2">
+            </div>
+            <div>
+                <label for="desconto2">Digite o Desconto:</label>
+                <input type="number" id="desconto2" name="desconto2">
+            </div>
+            <button>Calcular</button>
+            <p id="resultado02"></p>
+        </section>
+        <!-- Adicione mais seções conforme necessário, atualizando os ids e names dos inputs -->
+    </main>
 
-    <button onclick="calcularDesconto()">QUESTÃO 01</button>
-    <button onclick="convCelsiusFare()">QUESTÃO 02</button>
-    <button onclick="calculaAreaPerimetroRetangulo()">QUESTÃO 03</button>
-    <button onclick="calcularIdade()">QUESTÃO 04</button>
-    
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

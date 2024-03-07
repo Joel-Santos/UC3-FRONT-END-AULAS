@@ -10,12 +10,27 @@
 // }
 
 function calcularDesconto(){
-    let preco = prompt("Digite o preço do PRODUTO:")
-    let desconto = prompt("Digite o percentual do DESCONTO:")
-    let novoPreco = preco - (preco*(desconto/100))
-    console.log(novoPreco)
-    alert("Novo Preço é: " + novoPreco)
+    // let preco = prompt("Digite o preço do PRODUTO:")
+    // let desconto = prompt("Digite o percentual do DESCONTO:")
+    // let novoPreco = preco - (preco*(desconto/100))
+    // console.log(novoPreco)
+    // alert("Novo Preço é: " + novoPreco)
+    let preco = document.getElementById('preco')
+    let desconto = document.getElementById('desconto')
+    let resultado =  document.getElementById('resultado01')
+    let novoPreco = preco.value - (preco.value*(desconto.value/100))
+    // resultado.innerText = "Novo Preço = " + novoPreco
+   resultado.innerText = `Novo Preço = ${novoPreco} `
 }
+
+let botao01 = document.getElementById("questao01")
+botao01.addEventListener("click", calcularDesconto)
+
+
+
+
+
+
 function convCelsiusFare(){
     let celsius = prompt("Digite a Temperatura em Celsius:")
     let novaTemp = (celsius*(9/5)) + (32)
