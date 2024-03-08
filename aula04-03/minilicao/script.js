@@ -27,33 +27,46 @@ let botao01 = document.getElementById("questao01")
 botao01.addEventListener("click", calcularDesconto)
 
 
-
-
-
-
 function convCelsiusFare(){
-    let celsius = prompt("Digite a Temperatura em Celsius:")
-    let novaTemp = (celsius*(9/5)) + (32)
-    console.log(novaTemp)
-    alert("A temperatura em Fahrenheit é: " + novaTemp)
+    let celsius = document.getElementById('celsius').value
+    let novaTemp = (celsius*(1.8)) + (32)
+    let resultado = document.getElementById('resultado02')
+
+    resultado.innerText = `Conversão = ${novaTemp}`
+   
 }
+
+let botao02 = document.getElementById('questao02')
+    botao02.addEventListener("click", convCelsiusFare)
+// function convCelsiusFare(){
+//     let celsius = prompt("Digite a Temperatura em Celsius:")
+//     let novaTemp = (celsius*(9/5)) + (32)
+//     console.log(novaTemp)
+//     alert("A temperatura em Fahrenheit é: " + novaTemp)
+// }
 
 function calculaAreaPerimetroRetangulo(){
-    let base = prompt("Digite a Base do Retangulo:")
-    let altura = prompt("Digite a Altura do Retangulo:")
+    let base = document.getElementById('base').value
+    let altura = document.getElementById('altura').value
     let area = (base*altura)
     let perimetro = ((base*2)+(altura*2))
-    console.log(area)
-    alert(`A Área e o Perimetro do Retangulo são respectivamente: ${area} e ${perimetro}`)
+    let resultado = document.getElementById('resultado03')
+    resultado.innerText = `A área é: = ${area} e o perímetro é: ${perimetro}`
     
 }
+let botao03 = document.getElementById('questao03')
+    botao03.addEventListener("click", calculaAreaPerimetroRetangulo)
+
 function calcularIdade(){
     const anoVigente = new Date().getFullYear()
-    let ano = prompt("Digite o ano de nascimento:")
+    let resultado = document.getElementById('resultado04')
+    let ano = document.getElementById('anoNascimento').value
     let idade = (anoVigente - ano)
-    console.log(idade)
-    alert("A sua idade é: " + idade) 
+    resultado.innerText=`A sua idade é:  ${idade}` 
+    
 }
+let botao04 = document.getElementById('questao04')
+    botao04.addEventListener("click", calcularIdade)
 
 
 

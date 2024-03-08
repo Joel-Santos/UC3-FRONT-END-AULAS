@@ -1,6 +1,7 @@
 main{
     display:flex ;
     padding: 1rem;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 section {
