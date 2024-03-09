@@ -13,6 +13,7 @@ function insert(entrada){
         if(entrada=='+' || entrada=='-' || entrada=='/' || entrada=='x'){
             visor.innerText += entrada
         }else{
+            calc = ""
             visor.innerText = entrada
         }
     }else{
