@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Minha Lista de Tarefas</h1>
+  <input type="text" id="task" placeholder="Adicionar nova tarefa">
+  <button onclick="addTask()">Adicionar</button>
+  <button onclick="buscar()">Buscar</button>
+  <ul id="taskList"></ul>
+
+  <ul id="listaFiltrada"></ul>
+  <script>
+
+    let tarefas = JSON.parse(localStorage.getItem('tarefas')) || []
+
+    function addTask(){
+      let task = document.getElementById("task").value
+      if(!task){
+        alert("Preencha o campo")
+        return
+      }
+      tarefas.push(task)
+      atualizarLista()
+      saveTasksToLocalStorage()
+    }
+
+    function atualizarLista(){
+      let lista = document.getElementById("taskList")
+      let listaBusca = document.getElementById("listaFiltrada")
+      listaBusca.innerHTML = ""
+      lista.innerHTML = ""      
+      tarefas.forEach((task, index ) => {
+        console.log(index)
+        let item = document.createElement("li")
+        let editar = document.createElement("button")
+        editar.textContent = "Editar"
+        editar.setAttribute("onclick", `editar(${index})`)
+        let remover = document.createElement("button")
+        remover.textContent = "Apagar"
+        remover.setAttribute("onclick", `remover(${index})`)
+        item.textContent = task
+        item.appendChild(editar)
+        item.appendChild(remover)
+        lista.appendChild(item)
+      });
+    }
+    function remover(id){
+      let x = confirm(`Deseja realmente excluir a tarefa ${tarefas[id]}?`)
+      if(x){
+        tarefas.splice(id, 1)
+        saveTasksToLocalStorage();
+        atualizarLista();
+        alert("Removido com sucesso!")
+      }else{
+        alert("Operação cancelada!")
+      }
+    
+    }
+    function editar(id){
+        let tarefa = prompt(`Você está editando a tarefa ${tarefas[id]}`)
+        if(tarefa){
+          tarefas[id] =  tarefa
+          saveTasksToLocalStorage();
+          atualizarLista();
+          alert("Atualizado com sucesso!")
+        }else{
+          alert("Nenhuma alteração foi realizada!")
+        }
+      }
+      function buscar(){
+          let lista = document.getElementById("listaFiltrada")
+          let task = document.getElementById("task").value
+          if(!task){
+            alert("Preencha o campo")
+            return
+          }
+          tarefas.forEach((t, index ) => {
+            if(t === task){
+              
+              let item = document.createElement("li")
+              let editar = document.createElement("button")
+              editar.textContent = "Editar"
+              editar.setAttribute("onclick", `editar(${index})`)
+              let remover = document.createElement("button")
+              remover.textContent = "Apagar"
+              remover.setAttribute("onclick", `remover(${index})`)
+              item.textContent = t
+              item.appendChild(editar)
+              item.appendChild(remover)
+              lista.appendChild(item)
+                  
+            }
+          });
+          //const result = tarefas.find((t) => t === task);
+        }
+          
+  
+ 
+    function saveTasksToLocalStorage() {
+    localStorage.setItem('tarefas', JSON.stringify(tarefas)); // Salvar as tarefas no localStorage
+    }    
+    window.addEventListener('load', () => {
+        atualizarLista();
+    });
+
+
+  </script>
+
+</body>
+
+</html>

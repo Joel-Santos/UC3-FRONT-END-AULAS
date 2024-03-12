@@ -14,10 +14,26 @@ function insert(entrada){
             visor.innerText += entrada
         }else{
             calc = ""
-            visor.innerText = entrada
+            if(entrada=='.'){
+                visor.innerText = "0."
+            }else{
+                visor.innerText = entrada
+            }
         }
     }else{
-        visor.innerText += entrada
+        let aux;
+        if(visor.innerText.length==0 && entrada=="."){
+            visor.innerText += "0."
+        }else if(visor.innerText.length>0 && entrada == "."){
+            aux = visor.innerText.substring(visor.innerText.length -1)
+            if(aux == entrada){
+                back()
+                visor.innerText += entrada  
+            }
+            aux =""
+        }else{
+          visor.innerText += entrada  
+        }  
     }
 
     
