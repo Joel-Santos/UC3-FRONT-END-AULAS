@@ -15,4 +15,20 @@ main{
 }
 .concluido {
     text-decoration: line-through;
-  }
+}
+
+button{
+    background-color: blue;
+    color: azure;
+    padding: 10px;
+    border:1px solid ;
+    border-radius: 5px;
+}
+
+.botaoRemover{
+    background-color: red;
+    color: azure;
+    padding: 10px;
+    border:1px solid ;
+    border-radius: 5px;
+}
