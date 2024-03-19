@@ -24,11 +24,28 @@ button{
     border:1px solid ;
     border-radius: 5px;
 }
-
 .botaoRemover{
-    background-color: red;
-    color: azure;
+    background-color: rgb(13, 13, 13);
+    background-image: url('./img/remover.png');
+    background-size: cover;
     padding: 10px;
     border:1px solid ;
     border-radius: 5px;
+    width: auto;
 }
+
+ul{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px auto;
+    justify-content: space-around;
+    flex-direction: column;
+}
+li {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+}
+
