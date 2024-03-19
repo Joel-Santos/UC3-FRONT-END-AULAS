@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção de Animais</title>
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Estilos para a barra de navegação */
+        nav {
+            display: flex;
+            justify-content: center; /* Centralizar a barra de navegação */
+            align-items: center;
+            background-color: #444;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Estilos para a seção principal */
+        main {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            
+        }
+
+        main section {
+           /* Ocupar todo o espaço disponível */
+          flex: 1;
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Estilos para o formulário de cadastro e login */
+        aside {
+            flex: 1; 
+            padding: 20px;
+            margin: 5px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            
+        }
+
+        aside h2 {
+            margin-bottom: 10px;
+        }
+
+        aside form {
+            margin-bottom: 20px;
+        }
+
+        aside label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        aside input[type="text"],
+        aside input[type="email"],
+        aside input[type="password"],
+        aside button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        aside button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        aside button:hover {
+            background-color: #444;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Adoção de Animais</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Sobre Nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius nisi ut ex ultrices, vel tincidunt dui maximus.</p>
+        </section>
+
+        <section>
+            <h2>Como Adotar</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius nisi ut ex ultrices, vel tincidunt dui maximus.</p>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius nisi ut ex ultrices, vel tincidunt dui maximus.</p>
+        </section>
+
+        <aside>
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <label for="email_login">Email:</label>
+                <input type="email" id="email_login" name="email_login" required><br>
+                <label for="senha_login">Senha:</label>
+                <input type="password" id="senha_login" name="senha_login" required><br>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <h2>Cadastro</h2>
+            <form action="/cadastro" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adoção de Animais. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
