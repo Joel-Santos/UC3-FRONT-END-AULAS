@@ -7,30 +7,33 @@ let botaoCadastro = document.querySelector('.cadastro form .botao')
 botaoCadastro.addEventListener('click', cadastrarUser)
 
 function cadastrarUser(event){
-    event.preventDefault
-    let usuario = document.getElementById('cadUsuario').value 
-    let email = document.getElementById('email').value
+    let nomeUser = document.getElementById('cadUsuario').value 
+    let cadEmail = document.getElementById('email').value
     let senha = document.getElementById('cadSenha').value
     let confirmarSenha =  document.getElementById('confirmarSenha').value
-    if(!usuario && !email && !senha && !confirmarSenha){
+    if(!nomeUser && !cadEmail && !senha && !confirmarSenha){
         alert('Preencha todos os campos, sujeito!!!')
-        return
+        event.preventDefault()  
     }
-    if(senha===confirmarSenha){
-        let user = {usuario: usuario, email:email, senha:senha }
-        usuarios.push(user)
-        salvarUser()
+    //verificar se existe um usuario ou email já cadastrado
+    if(usuarios.find((u) => u.usuario === nomeUser) || usuarios.find((u) => u.email === cadEmail) ){
+        alert('O nome de usuário ou E-mail já existe!')  
+        event.preventDefault()     
     }else{
-        alert('Senhas incompativeis')
-    }
-    usuario.value = ""
-    email.value = ""
-    senha =  ""
-    confirmarSenha = ""
-
-    
+        if(senha===confirmarSenha){
+            let user = {usuario: nomeUser, email:cadEmail, senha:senha }
+            usuarios.push(user)
+            salvarUser()
+            alert('Usuário cadastrado com sucesso!')
+            nomeUser.value = ""
+            cadEmail.value = ""
+            senha =  ""
+            confirmarSenha = ""
+        }else{
+            alert('Senhas incompativeis')
+        }
+    }     
 }
-
 
 function salvarUser(){
 
