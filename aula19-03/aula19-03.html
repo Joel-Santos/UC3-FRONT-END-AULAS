@@ -27,22 +27,22 @@
             </article>
             <article>
                 <div class="cadastro">
-                    <form action="">
+                    <form>
                         <div>
                             <label for="usuario">Usuário:</label>
-                            <input type="text" name="usuario" id="usuario">
+                            <input type="text" name="cadUsuario" id="cadUsuario" required>
                        </div> 
                         <div>
                             <label for="email">E-mail:</label>
-                             <input type="email" id="email" name="email">
+                             <input type="email" id="email" name="email" required>
                        </div>
                        <div>
                             <label for="senha">Senha:</label>
-                             <input type="password" id="senha" name="senha">
+                             <input type="password" id="cadSenha" name="cadSenha" required>
                        </div>
                        <div>
                         <label for="confirmarSenha">Confirmar Senha:</label>
-                        <input type="password" id="confirmarSenha" name="confirmarSenha">
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
                        </div>
                        <div>
                         <button class="botao" type="submit">Cadastre-se</button>
@@ -54,5 +54,6 @@
         </section>
     </main>
     <footer>Footer</footer>
+    <script src="script.js"></script>
 </body>
 </html>
