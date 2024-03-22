@@ -5,6 +5,8 @@ let usuarios  = JSON.parse(localStorage.getItem('users')) || []
 
 let botaoCadastro = document.querySelector('.cadastro form .botao')
 botaoCadastro.addEventListener('click', cadastrarUser)
+let botaoLogin =  document.querySelector('.login form .botao')
+botaoLogin.addEventListener('click', Login)
 
 function cadastrarUser(event){
     let nomeUser = document.getElementById('cadUsuario').value 
@@ -35,8 +37,29 @@ function cadastrarUser(event){
     }     
 }
 
+function Login(event){
+   event.preventDefault()
+    let loginUser = document.getElementById('usuario').value
+    let loginSenha = document.getElementById('senha').value
+    let user = usuarios.find((u) => u.usuario === loginUser && u.senha===loginSenha) 
+    //let senhaUserBanco = usuarios.find((u) => u.senha === loginSenha)
+
+   
+
+    if(user){
+        alert('Bem Vindo Jovem!')
+    }else if(!user.usuario || !user.senha){
+        alert('Usuário ou senha incorreta')
+    }else{
+        
+        alert('Cadastro não encontrado!')
+        console.log(`user : ${user.usuario} senha: ${user.senha}`)
+    }
+}
+
+
+
+
 function salvarUser(){
-
     localStorage.setItem('users', JSON.stringify(usuarios))
-
 }
