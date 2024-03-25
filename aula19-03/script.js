@@ -38,23 +38,30 @@ function cadastrarUser(event){
 }
 
 function Login(event){
-   event.preventDefault()
+
     let loginUser = document.getElementById('usuario').value
     let loginSenha = document.getElementById('senha').value
-    let user = usuarios.find((u) => u.usuario === loginUser && u.senha===loginSenha) 
+    let user = usuarios.find((u) => u.usuario === loginUser) 
     //let senhaUserBanco = usuarios.find((u) => u.senha === loginSenha)
 
-   
+    if(!loginUser || !loginSenha){
+        alert('Preencha todos os campos')
+        return
+    }
 
     if(user){
-        alert('Bem Vindo Jovem!')
-    }else if(!user.usuario || !user.senha){
-        alert('Usuário ou senha incorreta')
-    }else{
+        if(loginSenha===user.senha){
+            alert('Bem Vindo Jovem!')
+            window.open('https://www.google.com/')
         
-        alert('Cadastro não encontrado!')
-        console.log(`user : ${user.usuario} senha: ${user.senha}`)
-    }
+        }else{
+            alert('Senha incorreta') 
+            event.preventDefault()   
+        }
+    }else{
+        alert('Usuário não encontrado.') 
+        event.preventDefault()
+    }  
 }
 
 
